@@ -10,6 +10,7 @@
 body{
 font-family: Arial;
 margin:0;
+scroll-behavior:smooth;
 }
 
 header{
@@ -41,9 +42,16 @@ padding:120px;
 text-align:center;
 }
 
-section{
-padding:40px;
-text-align:center;
+.card{
+background:#f4f4f4;
+padding:20px;
+width:200px;
+transition:0.3s;
+}
+
+.card:hover{
+transform:translateY(-10px);
+box-shadow:0 8px 20px rgba(0,0,0,0.2);
 }
 
 footer{
@@ -81,17 +89,17 @@ padding:20px;
 
 <div style="display:flex; justify-content:center; gap:20px; flex-wrap:wrap;">
 
-<div style="background:#f4f4f4; padding:20px; width:200px;">
+<div class="card">
 <h3>Website Development</h3>
 <p>Professional websites for businesses.</p>
 </div>
 
-<div style="background:#f4f4f4; padding:20px; width:200px;">
+<div class="card">
 <h3>Digital Marketing</h3>
 <p>Grow your business online.</p>
 </div>
 
-<div style="background:#f4f4f4; padding:20px; width:200px;">
+<div class="card">
 <h3>Design</h3>
 <p>Creative design solutions.</p>
 </div>
