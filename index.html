@@ -1,14 +1,11 @@
 <!DOCTYPE html>
-
 <html>
 
 <head>
 <title>Brandvanta</title>
 
 <meta name="description" content="Brandvanta helps businesses grow online with website development, digital marketing, and design solutions.">
-
 <meta name="keywords" content="website development, digital marketing, business website, branding, startup website">
-
 <meta name="author" content="Brandvanta">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
@@ -82,6 +79,9 @@ background:#084c91;
 section{
 padding:60px 20px;
 text-align:center;
+opacity:0;
+transform:translateY(40px);
+transition:0.8s;
 }
 
 .services{
@@ -99,12 +99,6 @@ border-radius:8px;
 transition:0.4s;
 opacity:0;
 transform:translateY(40px);
-}
-
-section{
-opacity:0;
-transform:translateY(40px);
-transition:0.8s;
 }
 
 .card i{
@@ -175,9 +169,7 @@ margin-top:40px;
 <section class="hero">
 <h1>Grow Your Business Online</h1>
 <p>Professional Website Development & Digital Marketing</p>
-
 <button onclick="document.getElementById('contact').scrollIntoView()">Get Started</button>
-
 </section>
 
 <section id="portfolio">
@@ -187,20 +179,17 @@ margin-top:40px;
 <div style="display:flex;justify-content:center;gap:20px;flex-wrap:wrap;">
 
 <div style="width:260px;">
-<img src="https://images.unsplash.com/photo-1467232004584-a241de8bcf5d"
-style="width:100%;border-radius:6px;">
+<img src="https://images.unsplash.com/photo-1467232004584-a241de8bcf5d" style="width:100%;border-radius:6px;">
 <h4>Business Website</h4>
 </div>
 
 <div style="width:260px;">
-<img src="https://images.unsplash.com/photo-1559028012-481c04fa702d"
-style="width:100%;border-radius:6px;">
+<img src="https://images.unsplash.com/photo-1559028012-481c04fa702d" style="width:100%;border-radius:6px;">
 <h4>E-commerce Store</h4>
 </div>
 
 <div style="width:260px;">
-<img src="https://images.unsplash.com/photo-1519389950473-47ba0277781c"
-style="width:100%;border-radius:6px;">
+<img src="https://images.unsplash.com/photo-1519389950473-47ba0277781c" style="width:100%;border-radius:6px;">
 <h4>Startup Landing Page</h4>
 </div>
 
@@ -251,35 +240,17 @@ digital marketing, and creative design solutions.
 
 <h2>Contact Us</h2>
 
-<form>
-<input type="text" placeholder="Your Name">
-<input type="email" placeholder="Your Email">
-<textarea placeholder="Your Message" rows="5"></textarea>
-<button>Send Message</button>
-</form>
-
-<iframe 
-src="https://www.google.com/maps?q=India&output=embed"
-width="100%" 
-height="300"
-style="border:0;margin-top:30px;border-radius:8px;">
-</iframe>
-
-</section>
-
-<form>
-
 <p id="successMessage" style="display:none;color:green;">
 Message sent successfully!
 </p>
 
-<input type="text" placeholder="Your Name">
+<form onsubmit="showMessage(); return false;">
 
-<input type="email" placeholder="Your Email">
+<input type="text" placeholder="Your Name" required>
+<input type="email" placeholder="Your Email" required>
+<textarea placeholder="Your Message" rows="5" required></textarea>
 
-<textarea placeholder="Your Message" rows="5"></textarea>
-
-<button onclick="showMessage()">Send Message</button>
+<button type="submit">Send Message</button>
 
 </form>
 
@@ -313,6 +284,7 @@ style="border:0;margin-top:30px;border-radius:8px;">
 </div>
 
 </footer>
+
 <script>
 
 const elements = document.querySelectorAll("section, .card");
@@ -334,14 +306,11 @@ el.style.transform = "translateY(0)";
 
 });
 
-</script>
-<script>
-
 function showMessage(){
 document.getElementById("successMessage").style.display="block";
 }
 
 </script>
-</body>
 
+</body>
 </html>
